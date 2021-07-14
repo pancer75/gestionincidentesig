@@ -1,0 +1,28 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="/stylesheets/login.css">
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <h5>Gestion Incidentes</h5>
+    </div>
+    
+    <!-- Login Form -->
+    <form action="/login" method="POST">
+      <input type="text" id="login" class="fadeIn second" name="usuarioRed" placeholder="Usuario de red">
+      <input type="password" id="password" class="fadeIn third" name="clave" placeholder="Contraseña">
+      <input type="submit" class="fadeIn fourth" value="Iniciar Sesion">
+    </form>
+    <% if(locals.error) {%>
+    <div id="formFooter">
+      <p style="color: red;">Correo o contraseña incorrectos</p>
+    </div>
+    <% } %>
+  </div>
+</div>
